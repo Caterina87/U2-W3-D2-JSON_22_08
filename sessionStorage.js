@@ -1,4 +1,4 @@
-let counterValue = parseInt(sessionStorage.getItem("lastCounterValue")) || 0;
+let counterValue = parseInt(sessionStorage.getItem("myTimer")) || 0;
 
 window.onload = () => {};
 
@@ -9,4 +9,6 @@ function myTimer() {
   console.log(counterValue);
 
   sessionStorage.setItem("myTimer", counterValue);
+  const p = document.getElementById("timer");
+  p.innerText = `${counterValue}`;
 }

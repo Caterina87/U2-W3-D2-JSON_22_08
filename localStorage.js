@@ -6,9 +6,13 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 const addName = (event) => {
+  event.preventDefault();
   const nome = document.getElementById("Nome").value;
   localStorage.setItem("NomeUtente", nome);
+  const p = document.querySelector("p");
+  p.innerHTML += `<p>${nome}</p>`;
 };
+
 const removeName = (event) => {
   localStorage.removeItem("NomeUtente");
 };
